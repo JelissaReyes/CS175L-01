@@ -3,7 +3,7 @@
 #AveragefromInput
 
 def main():
-    file_num = open("number.txt" ,'r')
+    file_num = open("numbers.txt" ,'r')
     x = 0
     total = 0
     for line in file_num:
@@ -11,10 +11,9 @@ def main():
         amount = float(line)
         total = total + amount
         print(f"I read in {x} number(s) "
-              f"Current number is: {amount:.1f}
+              f"Current number is: {amount:.1f}"
               f"Total is: {total:.1f}")
-    num_file.close()
+    file_num.close()
     average = total / x
     print (f"Average: {average:.1f}")
-if _name_ == "_main_":
-    main()
+main()
